@@ -62,10 +62,8 @@ class BuildTrackAction(QAction):
         self.type_group_combobox.currentIndexChanged.connect(self.slot_update_type_combobox)
 
         self.type_combobox = QComboBox()
-        self.type_combobox.addItems(['lay', 'ani', 'efx', 'lgt', 'pcmp', 'prep', 'cmp', 'plt'])
         self.format_label = QLabel('Format:')
         self.formatComboBox = QComboBox()
-        self.formatComboBox.addItems(['seq', 'mov'])
 
         database_lay = QHBoxLayout()
         database_lay.addWidget(QLabel('Project:'))
