@@ -31,7 +31,7 @@ class BuildTrackAction(QAction):
 
     def event_handler(self, event):
         """
-        右键菜单触发函数
+        event function
         :param event:
         :return: None
         """
@@ -113,11 +113,6 @@ class BuildTrackAction(QAction):
         window.exec_()
 
     def slot_update_type_combobox(self, index):
-        """
-
-        :param index:
-        :return:
-        """
         step_config = Path(__file__).parent.child('config').child('step_config.json')
         raw_data = util.open_json(step_config)
         step_data = raw_data.get('step_data')
@@ -132,7 +127,7 @@ class BuildTrackAction(QAction):
 
     def selected_result(self, result_list):
         """
-
+        get selected version
         :param result_list:
         :return:
         """
@@ -146,7 +141,7 @@ class BuildTrackAction(QAction):
 
     def data_parse(self, shot_list, pro, type_group, step_type):
         """
-
+        find version
         :param shot_list:
         :param pro:
         :param type_group:
@@ -168,7 +163,7 @@ class BuildTrackAction(QAction):
 
     def slot_parse(self):
         """
-
+        show result
         :return:
         """
 
@@ -189,7 +184,7 @@ class BuildTrackAction(QAction):
 
     def slot_build(self):
         """
-
+        build trackitem
         :return:
         """
         import hiero_util
@@ -221,4 +216,4 @@ class BuildTrackAction(QAction):
                 hiero_util.create_track_item(shot, new_clip, new_bin, new_track,
                                              track_item_list=self.trackItemList)
             else:
-                print u"文件不存在或者"
+                QMessageBox.critical(self, u'提示', u'文件不存在！')
