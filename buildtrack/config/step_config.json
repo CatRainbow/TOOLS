@@ -1,0 +1,28 @@
+{
+  "step_config": {
+    "dailies": [
+      "efx",
+      "pcmp",
+      "ani",
+      "mpt",
+      "lay",
+      "prep",
+      "lgt",
+      "cmp",
+      "plt"
+    ],
+    "element": [
+      "prep",
+      "cmp"
+    ]
+  },
+  "ext": {
+    "dailies": [
+      "mov",
+      "seq"
+    ],
+    "element": [
+      "seq"
+    ]
+  }
+}
